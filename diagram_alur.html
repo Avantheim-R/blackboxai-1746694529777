@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Diagram Alur Sistem Pembelajaran Desain Grafis</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f9fafb;
+    margin: 20px;
+    color: #333;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #1f2937;
+  }
+  .flowchart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .node {
+    background: #3b82f6;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin: 10px 0;
+    min-width: 220px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(59, 130, 246, 0.4);
+    position: relative;
+  }
+  .node.decision {
+    background: #f97316;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    width: 140px;
+    height: 140px;
+    line-height: 140px;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  .node.success {
+    background: #10b981;
+  }
+  .node.error {
+    background: #ef4444;
+  }
+  .node.database {
+    background: #6b7280;
+    border-radius: 20px / 50%;
+  }
+  .connector {
+    width: 4px;
+    background: #9ca3af;
+    margin: 0 auto;
+  }
+  .horizontal-connector {
+    height: 4px;
+    background: #9ca3af;
+    margin: 0 10px;
+    flex-grow: 1;
+  }
+  .branch {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+  .branch-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+  }
+  .label {
+    font-weight: bold;
+    margin: 5px 0 15px 0;
+    color: #374151;
+  }
+  .legend {
+    margin-top: 50px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .legend h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #1f2937;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    margin: 6px 0;
+  }
+  .legend-color {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    margin-right: 12px;
+  }
+  .legend-process { background: #3b82f6; }
+  .legend-decision { background: #f97316; }
+  .legend-success { background: #10b981; }
+  .legend-error { background: #ef4444; }
+  .legend-database { background: #6b7280; }
+  /* Arrows */
+  .arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid #9ca3af;
+    margin: 0 auto;
+  }
+  .arrow-right {
+    width: 15px; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #9ca3af;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+  .arrow-left {
+    width: 15px; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 15px solid #9ca3af;
+    margin-right: 10px;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+<h1>Diagram Alur Sistem Pembelajaran Desain Grafis</h1>
+<div class="flowchart">
+
+  <!-- Start -->
+  <div class="node" style="border-radius: 20px;">Halaman Utama</div>
+  <div class="arrow-down"></div>
+
+  <!-- Login/Register Decision -->
+  <div class="node decision">Login / Daftar?</div>
+  <div class="arrow-down"></div>
+
+  <!-- Branches -->
+  <div class="branch">
+    <!-- Siswa Branch -->
+    <div class="branch-column">
+      <div class="node">Siswa</div>
+      <div class="arrow-down"></div>
+      <div class="node">Dashboard Siswa</div>
+      <div class="arrow-down"></div>
+      <div class="node">Lihat Progress & Profil</div>
+      <div class="arrow-down"></div>
+      <div class="node">Pilih Bab Pembelajaran</div>
+      <div class="arrow-down"></div>
+      <div class="node">Baca Materi & Latihan Interaktif</div>
+      <div class="arrow-down"></div>
+      <div class="node decision">Selesai Kuis Per Bab?</div>
+      <div class="arrow-down"></div>
+      <div class="node">Lanjut ke Bab Berikutnya</div>
+      <div class="arrow-down"></div>
+      <div class="node decision">Selesai Semua Bab?</div>
+      <div class="arrow-down"></div>
+      <div class="node">Ikuti Ujian Akhir</div>
+      <div class="arrow-down"></div>
+      <div class="node decision">Lulus Ujian Akhir?</div>
+      <div class="arrow-down"></div>
+      <div class="node success">Dapatkan Sertifikat</div>
+    </div>
+
+    <!-- Connector between branches -->
+    <div class="horizontal-connector"></div>
+
+    <!-- Admin Branch -->
+    <div class="branch-column">
+      <div class="node">Admin</div>
+      <div class="arrow-down"></div>
+      <div class="node">Dashboard Admin</div>
+      <div class="arrow-down"></div>
+      <div class="node">Manajemen Konten</div>
+      <div class="arrow-down"></div>
+      <div class="node">Manajemen Pengguna</div>
+      <div class="arrow-down"></div>
+      <div class="node">Laporan & Statistik</div>
+      <div class="arrow-down"></div>
+      <div class="node">Konfigurasi Sistem</div>
+    </div>
+  </div>
+
+  <!-- Legend -->
+  <div class="legend">
+    <h2>Legenda</h2>
+    <div class="legend-item">
+      <div class="legend-color legend-process"></div>
+      <div>Proses</div>
+    </div>
+    <div class="legend-item">
+      <div class="legend-color legend-decision"></div>
+      <div>Keputusan</div>
+    </div>
+    <div class="legend-item">
+      <div class="legend-color legend-success"></div>
+      <div>Sukses / Selesai</div>
+    </div>
+    <div class="legend-item">
+      <div class="legend-color legend-error"></div>
+      <div>Error / Validasi</div>
+    </div>
+    <div class="legend-item">
+      <div class="legend-color legend-database"></div>
+      <div>Database</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
