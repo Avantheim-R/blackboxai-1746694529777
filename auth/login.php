@@ -49,8 +49,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <!-- Logo -->
         <div class="text-center mb-8">
             <a href="/" class="inline-block">
-                <div class="icon-container mx-auto mb-4 w-16 h-16 text-3xl animate-glow">
-                    <i class="fas fa-hexagon"></i>
+                <div class="logo-container w-20 h-20 mb-4">
+                    <div class="logo-hex"></div>
+                    <div class="logo-inner">
+                        <span>@</span>
+                    </div>
                 </div>
                 <h1 class="text-3xl font-bold text-white">DesignHive</h1>
                 <p class="text-blue-200 mt-2">SMK Negeri 1 Bantul</p>
@@ -65,13 +68,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
 
             <?php if (isset($_GET['message']) && $_GET['message'] === 'logged_out'): ?>
-                <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg mb-6">
+                <div class="bg-green-100/90 backdrop-blur-sm border border-green-400 text-green-700 px-4 py-3 rounded-lg mb-6">
                     <p class="text-center text-sm">Anda telah berhasil keluar dari sistem</p>
                 </div>
             <?php endif; ?>
 
             <?php if ($error): ?>
-                <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg mb-6">
+                <div class="bg-red-100/90 backdrop-blur-sm border border-red-400 text-red-700 px-4 py-3 rounded-lg mb-6">
                     <p class="text-center text-sm"><?= htmlspecialchars($error) ?></p>
                 </div>
             <?php endif; ?>
@@ -79,24 +82,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <form method="POST" class="space-y-6">
                 <div>
                     <label for="nis" class="block text-sm font-medium text-blue-200 mb-2">NIS</label>
-                    <div class="relative">
+                    <div class="relative group">
                         <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-blue-200">
                             <i class="fas fa-user"></i>
                         </span>
                         <input type="text" id="nis" name="nis" required
-                               class="input-professional w-full pl-10 pr-4 py-3"
+                               class="input-professional w-full pl-10 pr-4 py-3 group-hover:border-[#FFB302] transition-all duration-300"
                                placeholder="Masukkan NIS">
                     </div>
                 </div>
 
                 <div>
                     <label for="password" class="block text-sm font-medium text-blue-200 mb-2">Password</label>
-                    <div class="relative">
+                    <div class="relative group">
                         <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-blue-200">
                             <i class="fas fa-lock"></i>
                         </span>
                         <input type="password" id="password" name="password" required
-                               class="input-professional w-full pl-10 pr-4 py-3"
+                               class="input-professional w-full pl-10 pr-4 py-3 group-hover:border-[#FFB302] transition-all duration-300"
                                placeholder="Masukkan password">
                     </div>
                 </div>
@@ -150,28 +153,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 
     <!-- Decorative Elements -->
-    <div class="fixed top-0 left-0 w-full h-full pointer-events-none">
-        <div class="absolute top-10 left-10 w-64 h-64 bg-[#FFB302] rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob"></div>
-        <div class="absolute top-10 right-10 w-64 h-64 bg-[#2563EB] rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-2000"></div>
-        <div class="absolute bottom-10 left-20 w-64 h-64 bg-[#F7CE68] rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-4000"></div>
+    <div class="fixed top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
+        <div class="absolute top-10 left-10 w-64 h-64 bg-[#FFB302] rounded-full mix-blend-multiply filter blur-xl opacity-5 animate-blob"></div>
+        <div class="absolute top-10 right-10 w-64 h-64 bg-[#2563EB] rounded-full mix-blend-multiply filter blur-xl opacity-5 animate-blob animation-delay-2000"></div>
+        <div class="absolute bottom-10 left-20 w-64 h-64 bg-[#F7CE68] rounded-full mix-blend-multiply filter blur-xl opacity-5 animate-blob animation-delay-4000"></div>
     </div>
-
-    <style>
-        @keyframes blob {
-            0% { transform: translate(0px, 0px) scale(1); }
-            33% { transform: translate(30px, -50px) scale(1.1); }
-            66% { transform: translate(-20px, 20px) scale(0.9); }
-            100% { transform: translate(0px, 0px) scale(1); }
-        }
-        .animate-blob {
-            animation: blob 7s infinite;
-        }
-        .animation-delay-2000 {
-            animation-delay: 2s;
-        }
-        .animation-delay-4000 {
-            animation-delay: 4s;
-        }
-    </style>
 </body>
 </html>
