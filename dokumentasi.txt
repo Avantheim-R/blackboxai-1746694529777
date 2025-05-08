@@ -1,0 +1,112 @@
+SISTEM PEMBELAJARAN DESAIN GRAFIS INTERAKTIF
+===========================================
+
+DAFTAR HALAMAN:
+--------------
+
+1. Halaman Publik:
+   - index.php: Halaman utama/landing page
+   - auth/login.php: Halaman login
+   - auth/register.php: Halaman pendaftaran
+   - auth/logout.php: Proses logout
+   - auth/forgot_password.php: Halaman lupa password
+
+2. Halaman Admin:
+   - admin/dashboard.php: Dashboard admin
+   - admin/manage_users.php: Manajemen pengguna
+   - admin/manage_chapters.php: Manajemen bab/materi
+   - admin/reports.php: Laporan dan statistik
+   - admin/api/chapter_actions.php: API untuk manajemen bab
+   - admin/api/content_actions.php: API untuk manajemen konten
+   - admin/api/subchapter_actions.php: API untuk manajemen sub-bab
+
+3. Halaman Siswa:
+   - student/dashboard.php: Dashboard siswa
+   - student/learn.php: Halaman pembelajaran
+   - student/quiz.php: Halaman kuis
+   - student/final_exam.php: Halaman ujian akhir
+   - student/profile.php: Profil siswa
+   - student/certificate.php: Sertifikat kelulusan
+   - student/api/progress.php: API untuk progress belajar
+   - student/api/comments.php: API untuk sistem komentar
+   - student/api/submit_quiz.php: API untuk pengumpulan kuis
+   - student/api/submit_final_exam.php: API untuk pengumpulan ujian akhir
+
+DAFTAR FUNGSI:
+-------------
+
+1. Sistem Autentikasi:
+   - Pendaftaran akun baru
+   - Login dengan NIS dan password
+   - Reset password
+   - Manajemen sesi pengguna
+   - Pembedaan role (admin/siswa)
+
+2. Fungsi Admin:
+   - Manajemen pengguna (tambah, edit, hapus)
+   - Manajemen materi pembelajaran
+   - Pembuatan dan pengaturan kuis
+   - Monitoring progress siswa
+   - Melihat laporan dan statistik
+   - Manajemen konten pembelajaran
+
+3. Fungsi Siswa:
+   - Akses materi pembelajaran
+   - Mengerjakan kuis interaktif
+   - Mengikuti ujian akhir
+   - Melihat progress pembelajaran
+   - Mendapatkan sertifikat
+   - Mengubah profil
+   - Berinteraksi melalui komentar
+
+4. Sistem Pembelajaran:
+   - Materi pembelajaran terstruktur (bab dan sub-bab)
+   - Kuis interaktif dengan berbagai tipe soal
+   - Sistem penilaian otomatis
+   - Progress tracking
+   - Sistem gamifikasi (poin, level, badge)
+   - Sertifikasi kelulusan
+
+5. Fitur Interaktif:
+   - Kuis drag and drop
+   - Simulasi canvas untuk praktik desain
+   - Sistem komentar dan diskusi
+   - Timer untuk kuis dan ujian
+   - Preview hasil desain
+
+6. Sistem Penilaian:
+   - Penilaian otomatis untuk kuis
+   - Tracking progress per bab
+   - Perhitungan skor akhir
+   - Penentuan kelulusan
+   - Pemberian badge berdasarkan pencapaian
+
+7. Laporan dan Analitik:
+   - Statistik penggunaan sistem
+   - Laporan progress siswa
+   - Analisis performa kuis
+   - Tingkat penyelesaian materi
+   - Grafik dan visualisasi data
+
+8. Keamanan:
+   - Enkripsi password
+   - Validasi input
+   - Proteksi terhadap akses tidak sah
+   - Manajemen sesi yang aman
+   - Pembatasan akses berdasarkan role
+
+9. Antarmuka:
+   - Desain responsif
+   - Navigasi yang intuitif
+   - Dashboard yang informatif
+   - Tampilan modern dengan Tailwind CSS
+   - Ikon dan visual yang menarik
+
+10. Sistem File:
+    - Manajemen file materi
+    - Penyimpanan hasil kuis
+    - Generasi sertifikat PDF
+    - Pengelolaan gambar dan media
+    - Backup sistem
+
+Catatan: Sistem ini dirancang untuk memberikan pengalaman pembelajaran yang interaktif dan terstruktur dalam bidang desain grafis, dengan fokus pada kemudahan penggunaan dan efektivitas pembelajaran.
