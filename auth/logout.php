@@ -1,18 +1,22 @@
 <?php
 session_start();
+
+// Clear all session variables
 $_SESSION = array();
+
+// Destroy the session
 session_destroy();
 ?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Keluar - DesignHive</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="/assets/css/style.css" rel="stylesheet" />
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -26,7 +30,7 @@ session_destroy();
             to { opacity: 0; transform: translateY(-20px); }
         }
         .animate-progress {
-            animation: progress 2s linear;
+            animation: progress 2s linear forwards;
         }
         .fade-out {
             animation: fadeOut 0.5s ease-out forwards;
