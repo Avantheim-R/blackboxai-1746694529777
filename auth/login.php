@@ -42,36 +42,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #1E3A8A;
-            background-image: radial-gradient(rgba(255, 179, 2, 0.05) 2px, transparent 2px);
-            background-size: 32px 32px;
-        }
-        .form-input {
-            transition: all 0.3s ease;
-        }
-        .form-input:focus {
-            border-color: #FFB302;
-            box-shadow: 0 0 0 2px rgba(255, 179, 2, 0.1);
-        }
-    </style>
+    <link href="/assets/css/style.css" rel="stylesheet">
 </head>
-<body class="min-h-screen flex items-center justify-center p-4">
+<body class="professional-pattern min-h-screen flex items-center justify-center p-4">
     <div class="w-full max-w-md">
         <!-- Logo -->
         <div class="text-center mb-8">
             <a href="/" class="inline-block">
-                <i class="fas fa-hexagon text-[#FFB302] text-5xl"></i>
-                <h1 class="text-3xl font-bold text-white mt-4">DesignHive</h1>
+                <div class="icon-container mx-auto mb-4 w-16 h-16 text-3xl animate-glow">
+                    <i class="fas fa-hexagon"></i>
+                </div>
+                <h1 class="text-3xl font-bold text-white">DesignHive</h1>
                 <p class="text-blue-200 mt-2">SMK Negeri 1 Bantul</p>
             </a>
         </div>
 
         <!-- Login Card -->
-        <div class="bg-blue-900/30 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/10">
-            <h2 class="text-2xl font-bold text-white mb-6 text-center">Selamat Datang Kembali!</h2>
+        <div class="card-glass rounded-2xl p-8 shadow-professional hover-lift">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-bold text-white">Selamat Datang Kembali!</h2>
+                <p class="text-blue-200 mt-2">Masuk untuk melanjutkan perjalanan desainmu</p>
+            </div>
 
             <?php if (isset($_GET['message']) && $_GET['message'] === 'logged_out'): ?>
                 <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg mb-6">
@@ -93,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <i class="fas fa-user"></i>
                         </span>
                         <input type="text" id="nis" name="nis" required
-                               class="form-input w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-blue-200/50 focus:outline-none"
+                               class="input-professional w-full pl-10 pr-4 py-3"
                                placeholder="Masukkan NIS">
                     </div>
                 </div>
@@ -105,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <i class="fas fa-lock"></i>
                         </span>
                         <input type="password" id="password" name="password" required
-                               class="form-input w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-blue-200/50 focus:outline-none"
+                               class="input-professional w-full pl-10 pr-4 py-3"
                                placeholder="Masukkan password">
                     </div>
                 </div>
@@ -124,20 +115,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
 
                 <button type="submit" 
-                        class="w-full bg-[#FFB302] text-blue-900 py-3 rounded-lg font-semibold hover:bg-[#F7CE68] transition-all duration-300 flex items-center justify-center space-x-2">
+                        class="btn-primary w-full py-3 flex items-center justify-center space-x-2">
                     <i class="fas fa-sign-in-alt"></i>
                     <span>Masuk</span>
                 </button>
-            </form>
 
-            <div class="mt-6 text-center">
-                <p class="text-blue-200">
-                    Belum punya akun? 
-                    <a href="register.php" class="text-[#FFB302] hover:text-[#F7CE68] transition-colors font-medium">
-                        Daftar sekarang
-                    </a>
-                </p>
-            </div>
+                <div class="relative">
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-white/10"></div>
+                    </div>
+                    <div class="relative flex justify-center text-sm">
+                        <span class="px-2 bg-blue-900/30 text-blue-200">atau</span>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <p class="text-blue-200">
+                        Belum punya akun? 
+                        <a href="register.php" class="text-[#FFB302] hover:text-[#F7CE68] transition-colors font-medium">
+                            Daftar sekarang
+                        </a>
+                    </p>
+                </div>
+            </form>
         </div>
 
         <!-- Back to Home -->
@@ -148,5 +148,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </a>
         </div>
     </div>
+
+    <!-- Decorative Elements -->
+    <div class="fixed top-0 left-0 w-full h-full pointer-events-none">
+        <div class="absolute top-10 left-10 w-64 h-64 bg-[#FFB302] rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob"></div>
+        <div class="absolute top-10 right-10 w-64 h-64 bg-[#2563EB] rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-2000"></div>
+        <div class="absolute bottom-10 left-20 w-64 h-64 bg-[#F7CE68] rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-4000"></div>
+    </div>
+
+    <style>
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+    </style>
 </body>
 </html>
