@@ -54,8 +54,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Daftar - DesignHive</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link href="/assets/css/style.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
 </head>
 <body class="professional-pattern min-h-screen flex items-center justify-center p-4">
     <div class="w-full max-w-md">
@@ -68,8 +73,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <span>@</span>
                     </div>
                 </div>
-                <h1 class="text-3xl font-bold text-white">DesignHive</h1>
-                <p class="text-blue-200 mt-2">SMK Negeri 1 Bantul</p>
+                <h1 class="text-3xl font-bold text-white tracking-tight">DesignHive</h1>
+                <p class="text-blue-100 mt-2">SMK Negeri 1 Bantul</p>
             </a>
         </div>
 
@@ -77,17 +82,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="card-glass rounded-2xl p-8 shadow-professional hover-lift">
             <div class="text-center mb-8">
                 <h2 class="text-2xl font-bold text-white">Daftar Akun Baru</h2>
-                <p class="text-blue-200 mt-2">Mulai perjalanan desainmu bersama DesignHive</p>
+                <p class="text-blue-100 mt-2">Mulai perjalanan desainmu bersama DesignHive</p>
             </div>
 
             <?php if ($error): ?>
-                <div class="bg-red-100/90 backdrop-blur-sm border border-red-400 text-red-700 px-4 py-3 rounded-lg mb-6">
+                <div class="alert-error rounded-lg px-4 py-3 mb-6">
                     <p class="text-center text-sm"><?= htmlspecialchars($error) ?></p>
                 </div>
             <?php endif; ?>
 
             <?php if ($success): ?>
-                <div class="bg-green-100/90 backdrop-blur-sm border border-green-400 text-green-700 px-4 py-3 rounded-lg mb-6">
+                <div class="alert-success rounded-lg px-4 py-3 mb-6">
                     <p class="text-center text-sm"><?= htmlspecialchars($success) ?></p>
                     <a href="login.php" class="block mt-2 text-center text-green-700 underline">Klik di sini untuk login</a>
                 </div>
@@ -95,67 +100,67 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <form method="POST" class="space-y-6" id="registerForm">
                 <div>
-                    <label for="nis" class="block text-sm font-medium text-blue-200 mb-2">NIS</label>
+                    <label for="nis" class="block text-sm font-medium text-blue-100 mb-2">NIS</label>
                     <div class="relative group">
-                        <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-blue-200">
+                        <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-blue-100">
                             <i class="fas fa-id-card"></i>
                         </span>
                         <input type="text" id="nis" name="nis" required
-                               class="input-professional w-full pl-10 pr-4 py-3 group-hover:border-[#FFB302] transition-all duration-300"
+                               class="input-professional w-full pl-10 pr-4 py-3 group-hover:border-yellow-400 transition-all duration-300"
                                placeholder="Masukkan NIS">
                     </div>
                 </div>
 
                 <div>
-                    <label for="name" class="block text-sm font-medium text-blue-200 mb-2">Nama Lengkap</label>
+                    <label for="name" class="block text-sm font-medium text-blue-100 mb-2">Nama Lengkap</label>
                     <div class="relative group">
-                        <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-blue-200">
+                        <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-blue-100">
                             <i class="fas fa-user"></i>
                         </span>
                         <input type="text" id="name" name="name" required
-                               class="input-professional w-full pl-10 pr-4 py-3 group-hover:border-[#FFB302] transition-all duration-300"
+                               class="input-professional w-full pl-10 pr-4 py-3 group-hover:border-yellow-400 transition-all duration-300"
                                placeholder="Masukkan nama lengkap">
                     </div>
                 </div>
 
                 <div>
-                    <label for="email" class="block text-sm font-medium text-blue-200 mb-2">Email</label>
+                    <label for="email" class="block text-sm font-medium text-blue-100 mb-2">Email</label>
                     <div class="relative group">
-                        <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-blue-200">
+                        <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-blue-100">
                             <i class="fas fa-envelope"></i>
                         </span>
                         <input type="email" id="email" name="email" required
-                               class="input-professional w-full pl-10 pr-4 py-3 group-hover:border-[#FFB302] transition-all duration-300"
+                               class="input-professional w-full pl-10 pr-4 py-3 group-hover:border-yellow-400 transition-all duration-300"
                                placeholder="Masukkan email">
                     </div>
                 </div>
 
                 <div>
-                    <label for="password" class="block text-sm font-medium text-blue-200 mb-2">Password</label>
+                    <label for="password" class="block text-sm font-medium text-blue-100 mb-2">Password</label>
                     <div class="relative group">
-                        <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-blue-200">
+                        <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-blue-100">
                             <i class="fas fa-lock"></i>
                         </span>
                         <input type="password" id="password" name="password" required
-                               class="input-professional w-full pl-10 pr-4 py-3 group-hover:border-[#FFB302] transition-all duration-300"
+                               class="input-professional w-full pl-10 pr-4 py-3 group-hover:border-yellow-400 transition-all duration-300"
                                placeholder="Buat password">
                     </div>
-                    <div class="mt-2 text-sm text-blue-200/70 space-y-1">
+                    <div class="mt-2 text-sm text-blue-100/70 space-y-1">
                         <p class="flex items-center">
-                            <i class="fas fa-shield-alt mr-2 text-[#FFB302]"></i>
+                            <i class="fas fa-shield-alt mr-2 text-yellow-400"></i>
                             Password harus memenuhi kriteria:
                         </p>
                         <ul class="list-none space-y-1 pl-6">
                             <li class="flex items-center">
-                                <i class="fas fa-check-circle text-xs mr-2 text-[#FFB302]"></i>
+                                <i class="fas fa-check-circle text-xs mr-2 text-yellow-400"></i>
                                 Minimal 8 karakter
                             </li>
                             <li class="flex items-center">
-                                <i class="fas fa-check-circle text-xs mr-2 text-[#FFB302]"></i>
+                                <i class="fas fa-check-circle text-xs mr-2 text-yellow-400"></i>
                                 Mengandung huruf dan angka
                             </li>
                             <li class="flex items-center">
-                                <i class="fas fa-check-circle text-xs mr-2 text-[#FFB302]"></i>
+                                <i class="fas fa-check-circle text-xs mr-2 text-yellow-400"></i>
                                 Mengandung karakter khusus (@$!%*#?&)
                             </li>
                         </ul>
@@ -163,22 +168,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
 
                 <div>
-                    <label for="confirm_password" class="block text-sm font-medium text-blue-200 mb-2">Konfirmasi Password</label>
+                    <label for="confirm_password" class="block text-sm font-medium text-blue-100 mb-2">Konfirmasi Password</label>
                     <div class="relative group">
-                        <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-blue-200">
+                        <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-blue-100">
                             <i class="fas fa-lock"></i>
                         </span>
                         <input type="password" id="confirm_password" name="confirm_password" required
-                               class="input-professional w-full pl-10 pr-4 py-3 group-hover:border-[#FFB302] transition-all duration-300"
+                               class="input-professional w-full pl-10 pr-4 py-3 group-hover:border-yellow-400 transition-all duration-300"
                                placeholder="Masukkan ulang password">
                     </div>
                 </div>
 
                 <div class="flex items-center">
                     <input type="checkbox" id="terms" name="terms" required
-                           class="h-4 w-4 rounded border-white/10 bg-white/5 text-[#FFB302] focus:ring-[#FFB302]/50">
-                    <label for="terms" class="ml-2 block text-sm text-blue-200">
-                        Saya setuju dengan <a href="#" class="text-[#FFB302] hover:text-[#F7CE68] transition-colors">syarat dan ketentuan</a>
+                           class="h-4 w-4 rounded border-white/10 bg-white/5 text-yellow-400 focus:ring-yellow-400/50">
+                    <label for="terms" class="ml-2 block text-sm text-blue-100">
+                        Saya setuju dengan <a href="#" class="text-yellow-400 hover:text-yellow-300 transition-colors">syarat dan ketentuan</a>
                     </label>
                 </div>
 
@@ -193,14 +198,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <div class="w-full border-t border-white/10"></div>
                     </div>
                     <div class="relative flex justify-center text-sm">
-                        <span class="px-2 bg-blue-900/30 text-blue-200">atau</span>
+                        <span class="px-2 bg-blue-900/30 text-blue-100">atau</span>
                     </div>
                 </div>
 
                 <div class="text-center">
-                    <p class="text-blue-200">
+                    <p class="text-blue-100">
                         Sudah punya akun? 
-                        <a href="login.php" class="text-[#FFB302] hover:text-[#F7CE68] transition-colors font-medium">
+                        <a href="login.php" class="text-yellow-400 hover:text-yellow-300 transition-colors font-medium">
                             Masuk di sini
                         </a>
                     </p>
@@ -210,7 +215,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <!-- Back to Home -->
         <div class="mt-8 text-center">
-            <a href="/" class="text-blue-200 hover:text-white transition-colors inline-flex items-center">
+            <a href="/" class="text-blue-100 hover:text-white transition-colors inline-flex items-center">
                 <i class="fas fa-arrow-left mr-2"></i>
                 Kembali ke Beranda
             </a>
@@ -219,9 +224,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <!-- Decorative Elements -->
     <div class="fixed top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
-        <div class="absolute top-10 left-10 w-64 h-64 bg-[#FFB302] rounded-full mix-blend-multiply filter blur-xl opacity-5 animate-blob"></div>
-        <div class="absolute top-10 right-10 w-64 h-64 bg-[#2563EB] rounded-full mix-blend-multiply filter blur-xl opacity-5 animate-blob animation-delay-2000"></div>
-        <div class="absolute bottom-10 left-20 w-64 h-64 bg-[#F7CE68] rounded-full mix-blend-multiply filter blur-xl opacity-5 animate-blob animation-delay-4000"></div>
+        <div class="absolute top-10 left-10 w-64 h-64 bg-yellow-400 rounded-full mix-blend-multiply filter blur-xl opacity-5 animate-blob"></div>
+        <div class="absolute top-10 right-10 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-5 animate-blob animation-delay-2000"></div>
+        <div class="absolute bottom-10 left-20 w-64 h-64 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-5 animate-blob animation-delay-4000"></div>
     </div>
 
     <script>
