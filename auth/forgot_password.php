@@ -54,8 +54,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <!-- Logo -->
         <div class="text-center mb-8">
             <a href="/" class="inline-block">
-                <div class="icon-container mx-auto mb-4 w-16 h-16 text-3xl animate-glow">
-                    <i class="fas fa-hexagon"></i>
+                <div class="logo-container w-20 h-20 mb-4">
+                    <div class="logo-hex"></div>
+                    <div class="logo-inner">
+                        <span>@</span>
+                    </div>
                 </div>
                 <h1 class="text-3xl font-bold text-white">DesignHive</h1>
                 <p class="text-blue-200 mt-2">SMK Negeri 1 Bantul</p>
@@ -65,19 +68,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <!-- Forgot Password Card -->
         <div class="card-glass rounded-2xl p-8 shadow-professional hover-lift">
             <div class="text-center mb-8">
-                <i class="fas fa-key text-[#FFB302] text-4xl mb-4"></i>
+                <div class="icon-container mx-auto mb-4 w-16 h-16">
+                    <i class="fas fa-key text-2xl"></i>
+                </div>
                 <h2 class="text-2xl font-bold text-white">Lupa Password?</h2>
                 <p class="text-blue-200 mt-2">Masukkan NIS dan email Anda untuk mereset password</p>
             </div>
 
             <?php if ($error): ?>
-                <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg mb-6">
+                <div class="bg-red-100/90 backdrop-blur-sm border border-red-400 text-red-700 px-4 py-3 rounded-lg mb-6">
                     <p class="text-center text-sm"><?= htmlspecialchars($error) ?></p>
                 </div>
             <?php endif; ?>
 
             <?php if ($success): ?>
-                <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg mb-6">
+                <div class="bg-green-100/90 backdrop-blur-sm border border-green-400 text-green-700 px-4 py-3 rounded-lg mb-6">
                     <p class="text-center text-sm"><?= htmlspecialchars($success) ?></p>
                 </div>
             <?php endif; ?>
@@ -135,10 +140,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <!-- Back to Home -->
         <div class="mt-8 text-center">
             <a href="/" class="text-blue-200 hover:text-white transition-colors inline-flex items-center">
-                <i class="fas fa-arrow-left mr-2"></i>
+                <i class="fas fa-home mr-2"></i>
                 Kembali ke Beranda
             </a>
         </div>
+    </div>
+
+    <!-- Decorative Elements -->
+    <div class="fixed top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
+        <div class="absolute top-10 left-10 w-64 h-64 bg-[#FFB302] rounded-full mix-blend-multiply filter blur-xl opacity-5 animate-blob"></div>
+        <div class="absolute top-10 right-10 w-64 h-64 bg-[#2563EB] rounded-full mix-blend-multiply filter blur-xl opacity-5 animate-blob animation-delay-2000"></div>
+        <div class="absolute bottom-10 left-20 w-64 h-64 bg-[#F7CE68] rounded-full mix-blend-multiply filter blur-xl opacity-5 animate-blob animation-delay-4000"></div>
     </div>
 </body>
 </html>
