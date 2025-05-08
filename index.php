@@ -24,8 +24,11 @@ if (isset($_SESSION['user_id'])) {
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between h-20">
                 <div class="flex items-center space-x-3">
-                    <div class="icon-container animate-glow">
-                        <i class="fas fa-hexagon text-2xl"></i>
+                    <div class="logo-container w-12 h-12">
+                        <div class="logo-hex"></div>
+                        <div class="logo-inner">
+                            <span>@</span>
+                        </div>
                     </div>
                     <div>
                         <span class="text-2xl font-bold text-white">DesignHive</span>
@@ -54,6 +57,12 @@ if (isset($_SESSION['user_id'])) {
         </div>
         
         <div class="max-w-4xl z-10 animate-float">
+            <div class="logo-container w-24 h-24 mb-8 mx-auto">
+                <div class="logo-hex"></div>
+                <div class="logo-inner">
+                    <span>@</span>
+                </div>
+            </div>
             <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white">
                 Selamat Datang di 
                 <span class="text-gradient">DesignHive</span>
@@ -103,9 +112,8 @@ if (isset($_SESSION['user_id'])) {
     </section>
 
     <!-- Stats Section -->
-    <section class="py-20 px-4 relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-secondary opacity-30"></div>
-        <div class="max-w-7xl mx-auto relative z-10">
+    <section class="py-20 px-4 relative">
+        <div class="max-w-7xl mx-auto">
             <h2 class="text-4xl font-bold text-center mb-16 text-white">
                 Bergabung dengan <span class="text-gradient">DesignHive</span>
             </h2>
@@ -142,8 +150,11 @@ if (isset($_SESSION['user_id'])) {
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center mb-8">
                 <div class="flex items-center space-x-3 mb-8 md:mb-0">
-                    <div class="icon-container">
-                        <i class="fas fa-hexagon text-2xl"></i>
+                    <div class="logo-container w-12 h-12">
+                        <div class="logo-hex"></div>
+                        <div class="logo-inner">
+                            <span>@</span>
+                        </div>
                     </div>
                     <span class="text-2xl font-bold text-white">DesignHive</span>
                 </div>
