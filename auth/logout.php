@@ -22,8 +22,11 @@ session_destroy();
     <div class="w-full max-w-md text-center fade-out">
         <!-- Logo -->
         <div class="mb-8">
-            <div class="icon-container mx-auto mb-4 w-16 h-16 text-3xl animate-glow">
-                <i class="fas fa-hexagon"></i>
+            <div class="logo-container w-20 h-20 mx-auto mb-4">
+                <div class="logo-hex"></div>
+                <div class="logo-inner">
+                    <span>@</span>
+                </div>
             </div>
             <h1 class="text-3xl font-bold text-white">DesignHive</h1>
             <p class="text-blue-200 mt-2">SMK Negeri 1 Bantul</p>
@@ -47,18 +50,18 @@ session_destroy();
                 </p>
 
                 <!-- Progress Bar -->
-                <div class="w-full h-1 bg-white/10 rounded-full mt-8 overflow-hidden">
-                    <div class="h-full bg-gradient-to-r from-[#FFB302] to-[#F7CE68] animate-progress"></div>
+                <div class="w-full h-1.5 bg-white/5 rounded-full mt-8 overflow-hidden">
+                    <div class="h-full bg-gradient-to-r from-[#FFB302] to-[#F7CE68] animate-progress rounded-full"></div>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Decorative Elements -->
-    <div class="fixed top-0 left-0 w-full h-full pointer-events-none">
-        <div class="absolute top-10 left-10 w-64 h-64 bg-[#FFB302] rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob"></div>
-        <div class="absolute top-10 right-10 w-64 h-64 bg-[#2563EB] rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-2000"></div>
-        <div class="absolute bottom-10 left-20 w-64 h-64 bg-[#F7CE68] rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-4000"></div>
+    <div class="fixed top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
+        <div class="absolute top-10 left-10 w-64 h-64 bg-[#FFB302] rounded-full mix-blend-multiply filter blur-xl opacity-5 animate-blob"></div>
+        <div class="absolute top-10 right-10 w-64 h-64 bg-[#2563EB] rounded-full mix-blend-multiply filter blur-xl opacity-5 animate-blob animation-delay-2000"></div>
+        <div class="absolute bottom-10 left-20 w-64 h-64 bg-[#F7CE68] rounded-full mix-blend-multiply filter blur-xl opacity-5 animate-blob animation-delay-4000"></div>
     </div>
 
     <style>
