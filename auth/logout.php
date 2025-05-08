@@ -12,6 +12,7 @@ if (isset($_COOKIE[session_name()])) {
 // Destroy the session
 session_destroy();
 
-// Redirect to login page
-header('Location: /auth/login.php');
+// Redirect to login page with a success message
+header("Location: /auth/login.php?message=logged_out");
 exit;
+?>
